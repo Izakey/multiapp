@@ -1,0 +1,51 @@
+buildscript {
+    ext {
+        springBootVersion = '2.1.1.RELEASE'
+    }
+    repositories {
+        mavenLocal()
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+apply from: '../build.gradle'
+
+group = 'com.isaac'
+project.version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+targetCompatibility = '1.8'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.springframework.boot:spring-boot-starter-web'
+    compile(group: 'com.rmz', name: 'common-service', version: '0.0.1-SNAPSHOT')
+    testCompile 'org.springframework.boot:spring-boot-starter-test'
+}
+
+publishing {
+    publications {
+        third(MavenPublication) {
+            from components.java
+            groupId group
+            artifactId project.name
+            version project.version
+        }
+    }
+}
+
+jar {
+    from sourceSets.main.allSource
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
