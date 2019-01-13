@@ -1,0 +1,2 @@
+rootProject.name = 'first'
+enableFeaturePreview('STABLE_PUBLISHING')
