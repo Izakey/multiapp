@@ -1,0 +1,8 @@
+rootProject.name = 'multiapp'
+enableFeaturePreview('STABLE_PUBLISHING')
+
+includeBuild 'common'
+includeBuild 'first'
+includeBuild 'second'
+includeBuild 'third'
+includeBuild 'launcher'
