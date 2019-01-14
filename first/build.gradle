@@ -4,7 +4,7 @@ buildscript {
     }
     repositories {
         mavenLocal()
-        //jcenter()
+        jcenter()
         mavenCentral()
     }
     dependencies {
@@ -25,12 +25,14 @@ targetCompatibility = '1.8'
 
 repositories {
     mavenLocal()
-    //mavenCentral()
+    mavenCentral()
 }
 
 dependencies {
     compile 'org.springframework.boot:spring-boot-starter-web'
-    compile 'com.rmz:common-service:0.0.1-SNAPSHOT'
+    compile(group: 'com.rmz', name: 'common-service', version: '0.0.1-SNAPSHOT')
+    compile(group: 'io.springfox', name : 'springfox-swagger2', version: '2.9.2')
+    compile(group: 'io.springfox', name : 'springfox-swagger-ui', version: '2.9.1')
     testCompile 'org.springframework.boot:spring-boot-starter-test'
 }
 

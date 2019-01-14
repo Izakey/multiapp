@@ -49,6 +49,8 @@ dependencies {
     compile(group: 'com.isaac', name: 'first', version: '0.0.1-SNAPSHOT')
     compile(group: 'com.isaac', name: 'second', version: '0.0.1-SNAPSHOT')
     compile(group: 'com.isaac', name: 'third', version: '0.0.1-SNAPSHOT')
+    compile(group: 'io.springfox', name : 'springfox-swagger2', version: '2.9.2')
+    compile(group: 'io.springfox', name : 'springfox-swagger-ui', version: '2.9.1')
     compile group: 'org.springframework', name: 'spring-test', version: '2.5'
     //compile 'junit:junit:4.12'
     testCompile 'org.springframework.boot:spring-boot-starter-test'

@@ -1,7 +1,7 @@
 package com.isaac.second.backendRunner;
 
-import com.rmz.common.BackendRunner;
 import com.isaac.second.SecondApplication;
+import com.rmz.common.BackendRunner;
 
 public class SecondServiceBackendRunner extends BackendRunner {
 	public SecondServiceBackendRunner() {
